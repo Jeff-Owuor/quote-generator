@@ -1,5 +1,12 @@
 
 
-<form (ngSubmit)="submitQuote()">
-
+<form (ngSubmit)="submitQuote()" #goalForm="ngForm">
+    <div class="form-group">
+        <label for="name">Quote:</label>
+        <input type="text" id="name" name="quote" [(ngModel)]="anotherQuote.quote" #quote="ngModel">
+    </div>
+    <div *ngIf="showDetails">
+        {{anotherQuote.quote}}
+    </div>
+    <button type="submit" class="btn btn-info" (click)="toggleDetails()">Add Goal</button>
 </form>
