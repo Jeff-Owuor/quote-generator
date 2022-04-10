@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,22 +10,28 @@ import { Quote } from '../quote';
 })
 export class FormComponent implements OnInit {
     anotherQuote= new Quote("","","");
+    loginForm = new FormGroup({
+      userName:new FormControl(""),
+      quote:new FormControl(""),
+      author:new FormControl("")
+    })
    showDetails:boolean= false;
     @Output() addQuote = new EventEmitter<Quote>();
   constructor() { 
+    
 
   }
   submitQuote(){
     this.addQuote.emit(this.anotherQuote);
+    
   }
   toggleDetails(){
-      this.showDetails=!this.showDetails;
+      this.showDetails=true;
   }
   ngOnInit(): void {
   }
-  deleteQuote(isComplete:boolean){
-    if (isComplete){
-      
-    }
+  deleteQuote(formEl:any){
+    this.showDetails=false;
+    formEl.reset();
 }
 }

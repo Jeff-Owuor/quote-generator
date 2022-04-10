@@ -1,7 +1,7 @@
 
 
     <div class="container grid">
-<form (ngSubmit)="submitQuote()" #goalForm="ngForm" class="formation">
+<form (ngSubmit)="submitQuote()" #goalForm="ngForm" class="formation" #formElement>
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-4">
             <div *ngIf="showDetails" class="formQuote name">
@@ -14,7 +14,7 @@
                 {{anotherQuote.author}}
             </div>
             <app-increment-decrement *ngIf="showDetails"></app-increment-decrement>
-            <app-delete-quote (completion)="deleteQuote($event)" *ngIf="showDetails"></app-delete-quote>
+            <app-delete-quote (completion)="deleteQuote(formElement)" *ngIf="showDetails"></app-delete-quote>
         </div>
             <div class="col-md-4">
             <div class="form-group">

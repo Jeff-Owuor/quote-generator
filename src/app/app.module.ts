@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { FormComponent } from './form/form.component';
 import { IncrementDecrementComponent } from './increment-decrement/increment-decrement.component';
 import { DeleteQuoteComponent } from './delete-quote/delete-quote.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DeleteQuoteComponent } from './delete-quote/delete-quote.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
