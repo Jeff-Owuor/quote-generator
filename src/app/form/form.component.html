@@ -13,7 +13,8 @@
             <div *ngIf="showDetails" class="formQuote author">
                 {{anotherQuote.author}}
             </div>
-            <app-increment-decrement></app-increment-decrement>
+            <app-increment-decrement *ngIf="showDetails"></app-increment-decrement>
+            <app-delete-quote (completion)="deleteQuote($event)" *ngIf="showDetails"></app-delete-quote>
         </div>
             <div class="col-md-4">
             <div class="form-group">
@@ -30,7 +31,7 @@
                 <label for="name">Author:</label>
                 <input type="text" id="name" name="author" [(ngModel)]="anotherQuote.author" #author="ngModel">
             </div>
-            <button type="submit" class="btn btn-info button" (click)="toggleDetails()">Add Goal</button>
+            <button type="submit" class="btn btn-info button" (click)="toggleDetails()">Add Quote</button>
         </div>
         
     </div>

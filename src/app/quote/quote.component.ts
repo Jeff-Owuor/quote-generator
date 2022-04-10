@@ -14,9 +14,5 @@ export class QuoteComponent implements OnInit {
 }
   ngOnInit(): void {
   }
-  deleteQuote(isComplete:boolean){
-    if (isComplete){
-      
-    }
-}
+  
 }
