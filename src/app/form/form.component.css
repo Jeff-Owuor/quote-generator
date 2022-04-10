@@ -1,3 +1,4 @@
+
 .containing{
     display:flex;
 }
@@ -32,7 +33,11 @@
     margin-top:1%;
     width:70%;
 }
-/* .grid{
-   
-    
-} */
+h1{
+    color:magenta;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.grid{
+    margin-top: 20%;
+    border:3px groove magenta;
+}
