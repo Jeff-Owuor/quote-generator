@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormComponent } from './form/form.component';
 import { IncrementDecrementComponent } from './increment-decrement/increment-decrement.component';
+import { DeleteQuoteComponent } from './delete-quote/delete-quote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     FormComponent,
-    IncrementDecrementComponent
+    IncrementDecrementComponent,
+    DeleteQuoteComponent
   ],
   imports: [
     BrowserModule,
