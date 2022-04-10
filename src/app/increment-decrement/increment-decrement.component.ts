@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./increment-decrement.component.css']
 })
 export class IncrementDecrementComponent implements OnInit {
-
+  count=0;
+  counter=0;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  increment(){
+    this.count++;
+  }
+  decrement(){
+    this.counter++;
+  }
 }
