@@ -9,11 +9,9 @@
                 @{{anotherQuote.name}}
             </div>
             <div *ngIf="showDetails" class="formQuote quote">
-                {{anotherQuote.quote}}
+               <q> {{anotherQuote.quote}}</q> ~{{anotherQuote.author}}
             </div>
-            <div *ngIf="showDetails" class="formQuote author">
-                {{anotherQuote.author}}
-            </div>
+               <p class="time" *ngIf="showDetails">{{anotherQuote.completeDate|date:"HH:mm:ss"}}</p>
             <app-increment-decrement *ngIf="showDetails"></app-increment-decrement>
             <app-delete-quote (completion)="deleteQuote(formElement)" *ngIf="showDetails"></app-delete-quote>
         </div>
@@ -31,6 +29,10 @@
             <div class="form-group">
                 <label for="name">Author:</label>
                 <input type="text" id="name" name="author" [(ngModel)]="anotherQuote.author" #author="ngModel">
+            </div>
+            <div>
+                <label>Day:</label>
+                <input type="date">
             </div>
             <button type="submit" class="btn btn-info button" (click)="toggleDetails()">Add Quote</button>
         </div>

@@ -8,10 +8,8 @@
     font-size:medium;
     color:cyan;
 }  
-.author{
+.time{
     color:cyan;
-    font-size: large;
-   
 }
 .name{
     font-weight:bolder;
@@ -49,4 +47,9 @@ h1{
 }
 label{
     color:cyan;
+}
+q{
+    color:magenta;
+    width:1%;
+    height:2%;
 }

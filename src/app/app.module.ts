@@ -9,6 +9,7 @@ import { FormComponent } from './form/form.component';
 import { IncrementDecrementComponent } from './increment-decrement/increment-decrement.component';
 import { DeleteQuoteComponent } from './delete-quote/delete-quote.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TimePipe } from './time.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     QuoteComponent,
     FormComponent,
     IncrementDecrementComponent,
-    DeleteQuoteComponent
+    DeleteQuoteComponent,
+    TimePipe
   ],
   imports: [
     BrowserModule,
