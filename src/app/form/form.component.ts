@@ -23,7 +23,6 @@ export class FormComponent implements OnInit {
   }
   submitQuote(){
     this.addQuote.emit(this.anotherQuote);
-    
   }
   toggleDetails(){
       this.showDetails=true;

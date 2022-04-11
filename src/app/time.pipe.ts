@@ -5,11 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimePipe implements PipeTransform {
 
-  transform(value: any): any{
-    let time:Date= new Date();
-    
-}
-    
+  transform(value: any):any{
+   let today:Date = new Date();
+   let now:any =new Date(today.getHours(), today.getMinutes(), today.getSeconds());
+   
+  }
+  
   }
 
 
