@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef} from '@angular/core';
 
 import { Quote } from '../quote';
 @Component({
@@ -14,10 +14,10 @@ export class QuoteComponent implements OnInit {
     new Quote("Sometimes it's better to leave something alone, to pause, and that's very true of programming.","Joyce Wheeler","Jeff Ayieko",new Date(2016,0,7),0,0),
     new Quote("Testing leads to failure, and failure leads to understanding.","Andrew Omondi","Jeff Ayieko",new Date(2018,7,22),0,0)
   ];
-  constructor() { }
+  constructor(private elem:ElementRef) { }
   increment(index:number){
     this.quotes[index].like++;
-  }
+   }
   decrement(index:number){
     this.quotes[index].dislike++;
 

@@ -9,6 +9,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimePipe } from './time.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     QuoteComponent,
     FormComponent,
     TimePipe,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
