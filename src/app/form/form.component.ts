@@ -9,7 +9,7 @@ import { Quote } from '../quote';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-    anotherQuote= new Quote("","","",new Date());
+    anotherQuote= new Quote("","","",new Date(),0,0);
     loginForm = new FormGroup({
       userName:new FormControl(""),
       quote:new FormControl(""),

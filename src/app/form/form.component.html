@@ -1,27 +1,17 @@
 
 
     <div class="container grid">
-        <h1 class="text-center">Quote Generator</h1>
 <form (ngSubmit)="submitQuote()" #goalForm="ngForm" class="formation" #formElement>
     <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-4 details">
-            <div *ngIf="showDetails" class="formQuote name">
-                @{{anotherQuote.name}}
-            </div>
-            <div *ngIf="showDetails" class="formQuote quote">
-               <q> {{anotherQuote.quote}}</q> ~{{anotherQuote.author}}
-            </div>
-            <div *ngIf="showDetails" class="ptag">
-                {{anotherQuote.completeDate|date}}
-            </div>
-               <p class="time" *ngIf="showDetails">{{anotherQuote.completeDate|time}}</p>
-            <app-increment-decrement *ngIf="showDetails"></app-increment-decrement>
-            <app-delete-quote (completion)="deleteQuote(formElement)" *ngIf="showDetails"></app-delete-quote>
-        </div>
             <div class="col-md-4">
             <div class="form-group">
                 <label for="name">Fullname:</label>
-                <input type="text" required id="name" name="name" [(ngModel)]="anotherQuote.name" #nameControl="ngModel">
+                <input type="text" 
+                required id="name"
+                 name="name" 
+                 [(ngModel)]="anotherQuote.name" 
+                 #nameControl="ngModel"
+                 >
                 <div [hidden]="nameControl.valid || nameControl.pristine" class="alert alert-danger">
                     <p>Name is required</p>
                   </div>
@@ -46,7 +36,7 @@
                 <label>Day:</label>
                 <input type="date">
             </div>
-            <button type="submit" class="btn btn-info button" (click)="toggleDetails()">Add Quote</button>
+            <button type="submit" class="btn btn-info button">Add Quote</button>
         </div>
         
     </div>

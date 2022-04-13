@@ -6,19 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormComponent } from './form/form.component';
-import { IncrementDecrementComponent } from './increment-decrement/increment-decrement.component';
-import { DeleteQuoteComponent } from './delete-quote/delete-quote.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimePipe } from './time.pipe';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     FormComponent,
-    IncrementDecrementComponent,
-    DeleteQuoteComponent,
-    TimePipe
+    TimePipe,
+    QuoteDetailsComponent
   ],
   imports: [
     BrowserModule,

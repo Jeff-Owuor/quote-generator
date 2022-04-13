@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IncrementDecrementComponent } from './increment-decrement.component';
+import { QuoteDetailsComponent } from './quote-details.component';
 
-describe('IncrementDecrementComponent', () => {
-  let component: IncrementDecrementComponent;
-  let fixture: ComponentFixture<IncrementDecrementComponent>;
+describe('QuoteDetailsComponent', () => {
+  let component: QuoteDetailsComponent;
+  let fixture: ComponentFixture<QuoteDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IncrementDecrementComponent ]
+      declarations: [ QuoteDetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IncrementDecrementComponent);
+    fixture = TestBed.createComponent(QuoteDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
