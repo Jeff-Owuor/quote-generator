@@ -2,7 +2,7 @@
     <div class="row">
     <div class=" col-md-5 font-weight-light text-center">
         <div *ngFor='let quote of quotes;let i = index' class="containerEl mb-9">
-          <div >
+          <div>
             <p class="paragraph"><q>{{quote.quote}}</q>~<span class="author">{{quote.author}}</span></p>
             <button (click)='toggleDetails(i)' class="btn btn-dark">Toggle Details</button>
           </div>

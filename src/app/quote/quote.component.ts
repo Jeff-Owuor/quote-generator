@@ -17,7 +17,7 @@ export class QuoteComponent implements OnInit {
   constructor(private elem:ElementRef) { }
   increment(index:number){
     this.quotes[index].like++;
-   }
+    }
   decrement(index:number){
     this.quotes[index].dislike++;
 
